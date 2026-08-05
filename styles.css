@@ -1,0 +1,145 @@
+:root {
+    --bg-color: #080808;
+    --card-bg: #121212;
+    --text-primary: #e0e0e0;
+    --text-muted: #757575;
+    --border-color: #2b2b2b;
+    --accent: #b22222; /* Toque dramático sutil (rojo sangre oscuro) */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Cinzel', serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* Contador Principal */
+.counter-section {
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px 20px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.counter {
+    font-family: 'Courier Prime', monospace;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.counter-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Archivo de Lápidas */
+.archive-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.archive-section h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.tombstone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+ lápida-gap: 20px;
+    gap: 20px;
+}
+
+/* Diseño de la Tarjeta en forma de lápida */
+.tombstone {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    padding: 30px 15px 20px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.9);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.tombstone.monthly {
+    border-color: #555;
+    background-color: #181515;
+}
+
+.tombstone-date {
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.tombstone-count {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.tombstone-footer {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo Temporal - El Flujo</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Fuente de Google con aspecto sobrio/clásico -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <header class="header">
+            <h1>REGISTRO CONTINUO</h1>
+            <p class="subtitle">Conteo de ausencias globales en tiempo real</p>
+        </header>
+
+        <!-- Contador Principal -->
+        <section class="counter-section">
+            <div id="counter-display" class="counter">0</div>
+            <div class="counter-label">vidas concluidas desde el inicio del registro</div>
+        </section>
+
+        <!-- Sección de Archivo / Lápidas -->
+        <section class="archive-section">
+            <h2>Memoria de Jornadas y Ciclos</h2>
+            
+            <!-- Contenedor de Lápidas Mensuales (se muestran cuando se acumulan 12) -->
+            <div id="yearly-container" class="tombstone-grid"></div>
+
+            <!-- Contenedor de Lápidas Diarias -->
+            <div id="daily-container" class="tombstone-grid"></div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
